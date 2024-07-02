@@ -1,6 +1,7 @@
 import 'package:fitnesssupporter/screens/edit_screen.dart';
 import 'package:fitnesssupporter/screens/history_screen.dart';
 import 'package:fitnesssupporter/screens/home_screen.dart';
+import 'package:fitnesssupporter/screens/test_timer.dart';
 import 'package:fitnesssupporter/screens/timer_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
+        height: 70,
         elevation: 10,
         shadowColor: Colors.black,
         onDestinationSelected: (int index) {
@@ -25,12 +27,12 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
             currentPageIndex = index;
           });
         },
-        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
             selectedIcon: Icon(
-              color: Color(0xFFf2eedf),
+              color: Colors.white,
               Icons.fitness_center_rounded,
               size: 30,
             ),
@@ -43,7 +45,7 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
           ),
           NavigationDestination(
             selectedIcon: Icon(
-              color: Color(0xFFf2eedf),
+              color: Colors.white,
               Icons.calendar_month,
               size: 30,
             ),
@@ -56,7 +58,7 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
           ),
           NavigationDestination(
             selectedIcon: Icon(
-              color: Color(0xFFf2eedf),
+              color: Colors.white,
               Icons.edit_note,
               size: 30,
             ),
@@ -69,7 +71,7 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
           ),
           NavigationDestination(
             selectedIcon: Icon(
-              color: Color(0xFFf2eedf),
+              color: Colors.white,
               Icons.timer,
               size: 30,
             ),

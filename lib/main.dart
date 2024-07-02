@@ -15,16 +15,17 @@ class FitnessSupporter extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFf2eedf),
+        scaffoldBackgroundColor: Colors.white,
         navigationBarTheme: NavigationBarThemeData(
-            backgroundColor: const Color(0xFFf2eedf),
+            backgroundColor: Colors.white,
             labelTextStyle: WidgetStateProperty.all(
-              GoogleFonts.jua(
+              GoogleFonts.gaegu(
                 color: const Color(0xFF181818),
+                fontWeight: FontWeight.w600,
               ),
             ),
             indicatorColor: Colors.black),
-        textTheme: GoogleFonts.juaTextTheme(),
+        textTheme: GoogleFonts.gaeguTextTheme(),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF181818),
