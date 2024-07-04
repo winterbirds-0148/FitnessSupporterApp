@@ -21,3 +21,26 @@ class FitnessModel {
     }
   }
 }
+
+class Set {
+  int weight, repetition;
+  Set({required this.weight, required this.repetition});
+}
+
+class FitnessHistory {
+  FitnessModel fitness;
+  List<Set> history = [];
+
+  FitnessHistory({required this.fitness});
+
+  void addHistory(Set set) {
+    history.add(set);
+  }
+}
+
+class DateHistory {
+  String dateId;
+  List<FitnessHistory> dateHistory = [];
+
+  DateHistory({required this.dateId});
+}
