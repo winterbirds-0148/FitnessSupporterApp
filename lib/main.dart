@@ -1,10 +1,16 @@
-import 'package:fitnesssupporter/widgets/navigator_widget.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'dart:io';
 
-void main() {
+import 'package:fitnesssupporter/widgets/navigator_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
+
+void main() async {
+  // Hive 초기화
+  var path = Directory.current.path;
+  Hive.init(path);
+
+  // 앱 실행
   runApp(const FitnessSupporter());
 }
 
@@ -19,13 +25,13 @@ class FitnessSupporter extends StatelessWidget {
         navigationBarTheme: NavigationBarThemeData(
             backgroundColor: Colors.white,
             labelTextStyle: WidgetStateProperty.all(
-              GoogleFonts.gaegu(
+              GoogleFonts.notoSansKr(
                 color: const Color(0xFF181818),
                 fontWeight: FontWeight.w600,
               ),
             ),
             indicatorColor: Colors.black),
-        textTheme: GoogleFonts.gaeguTextTheme(),
+        textTheme: GoogleFonts.notoSansKrTextTheme(),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF181818),

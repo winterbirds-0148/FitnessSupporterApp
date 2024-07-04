@@ -1,12 +1,7 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
-import 'package:fitnesssupporter/models/timer_model.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class TimerScreen extends StatefulWidget {
   const TimerScreen({super.key});
@@ -46,32 +41,6 @@ class _TimerScreenState extends State<TimerScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Flexible(
-          flex: 2,
-          child: Container(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Colors.black54,
-                  width: 4,
-                ),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Text(
-                  '휴식 타이머',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w800,
-                    fontSize: 40,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
         Flexible(
           flex: 6,
           child: Center(

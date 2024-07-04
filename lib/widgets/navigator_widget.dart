@@ -1,7 +1,6 @@
 import 'package:fitnesssupporter/screens/edit_screen.dart';
 import 'package:fitnesssupporter/screens/history_screen.dart';
 import 'package:fitnesssupporter/screens/home_screen.dart';
-import 'package:fitnesssupporter/screens/test_timer.dart';
 import 'package:fitnesssupporter/screens/timer_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +17,10 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Fitness Supporter'),
+      ),
       bottomNavigationBar: NavigationBar(
         height: 70,
         elevation: 10,
